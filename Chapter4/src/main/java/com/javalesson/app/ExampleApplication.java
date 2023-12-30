@@ -16,7 +16,7 @@ public class ExampleApplication {
 
     public boolean showExample(){
         boolean result = false;
-        for (int index=0; index<7; index++){
+        for (int index=0; index<9; index++){
             config = new Config(index);
             if (config.example == 0) {
                 dialog = new IncDecDialog();
@@ -32,6 +32,10 @@ public class ExampleApplication {
                 dialog = new ByteUShiftDialog();
             }else if (config.example == 6) {
                 dialog = new OpBitEqualsDialog();
+            }else if (config.example == 7) {
+                dialog = new BoolLogicDialog();
+            }else if (config.example == 8) {
+                dialog = new TernaryDialog();
             }
             result = dialog.run();
         }
